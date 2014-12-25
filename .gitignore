@@ -1,3 +1,6 @@
 target/
+project/target/
+project/project/target
 
+projectFilesBackup/
 .DS_Store
