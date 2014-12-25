@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Bat Incident Scoreboard</title>
+  </head>
+  <body>
+    <!-- Include Scala.js compiled code -->
+    <script type="text/javascript" src="./target/scala-2.11/batincidentclock-fastopt.js"></script>
+    <!-- Reference all the dependencies -->
+    <script type="text/javascript" src="./target/scala-2.11/batincidentclock-jsdeps.js"></script>
+    <!-- Run the Javascript app portion -->
+    <script type="text/javascript">
+      batincidentclock.webapp.BatIncidentClock().main();
+    </script>
+    
+    <button id="click-me-button" type="button" 
+    onclick="batincidentclock.webapp.BatIncidentClock().addClickedMessage()">
+    Click me please</button>
+  </body>
+</html>
