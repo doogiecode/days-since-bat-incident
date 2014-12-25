@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Bat Incident Scoreboard</title>
+    <title>Days Since Last Bat Incident</title>
   </head>
   <body>
     <!-- Include Scala.js compiled code -->
@@ -12,7 +12,14 @@
     <!-- Run the Javascript app portion -->
     <script type="text/javascript" src="./target/scala-2.11/batincidentclock-launcher.js"></script>
     
-    <button id="click-me-button" type="button">
-    Click me please</button>
+    <div id="allContent">
+      <span id="preText">This department has proudly worked<span>
+        <div id="number">
+          29
+          <span>days</span>
+        </div>
+      <span id="postText">without a bat incident.</span>
+    </div>
+    
   </body>
 </html>

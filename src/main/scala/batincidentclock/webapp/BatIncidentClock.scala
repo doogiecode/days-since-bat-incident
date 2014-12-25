@@ -8,9 +8,9 @@ import org.scalajs.jquery.jQuery
 object BatIncidentClock extends JSApp {
   def main(): Unit = {
     println("Hello world!")
-    appendPar(document.body, "Hello Mom!")
-    jQuery("body").append("<p>[message]</p>")
-    jQuery(setupUI _)
+    //appendPar(document.body, "Hello Mom!")
+    //jQuery("body").append("<p>[message]</p>")
+    //jQuery(setupUI _)
   }
 
   def appendPar(targetNode: dom.Node, text: String): Unit = {
