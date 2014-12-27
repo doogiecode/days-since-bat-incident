@@ -1,6 +1,7 @@
 target/
 project/target/
 project/project/target
+.idea
 
 projectFilesBackup/
 .DS_Store
