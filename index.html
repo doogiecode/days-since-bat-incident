@@ -22,6 +22,14 @@
     
     var buffer = daysSince.toString().split("").reverse().join("");
     
+    var invertColors = function() {
+    	var currentColor = $('body').css('color');
+    	var currentBackgroundColor = $('body').css('background-color');
+    	$('body').css('color', currentBackgroundColor);
+    	$('body').css('background-color', currentColor);
+    }
+    
+    
     </script>
     
     <div id="allContent">
@@ -35,12 +43,6 @@
       <div id="postText" class="text">without a bat incident</div>
     </div>
     
-    <script>
-    for (var c = 0, len = buffer.length; c < len; c++) {
-      console.log('hi!');
-      $('#number').prepend('<span class="digit">' + buffer[c] + '</div>');
-    };
-    </script>
     
     <svg
        xmlns:cc="http://creativecommons.org/ns#"
@@ -67,6 +69,15 @@
         </g>
       </g>
     </svg>
+    
+    <script>
+    for (var c = 0, len = buffer.length; c < len; c++) {
+      console.log('hi!');
+      $('#number').prepend('<span class="digit">' + buffer[c] + '</div>');
+    };
+    
+    $('#approachableBat').click(invertColors);
+    </script>
     
   </body>
 </html>
