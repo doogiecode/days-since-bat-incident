@@ -18,9 +18,6 @@
     var now = moment();
     var daysSince = now.diff(incident, 'days');
     
-    console.log(daysSince.toString());
-    
-    var buffer = daysSince.toString().split("").reverse().join("");
     
     var invertColors = function() {
     	var currentColor = $('body').css('color');
@@ -29,6 +26,28 @@
     	$('body').css('background-color', currentColor);
     }
     
+    var writeNumber = function() {
+    	$('#number').empty();
+    
+    	var buffer = daysSince.toString().split("").reverse().join("");
+    
+    	for (var c = 0, len = buffer.length; c < len; c++) {
+      	$('#number').prepend('<span class="digit">' + buffer[c] + '</div>');
+    	};
+    }
+    
+    var checkAgain = function() {
+    	var now = moment();
+    	var newDaysSince = now.diff(incident, 'days');
+
+    	if (newDaysSince != daysSince) {
+    		daysSince = newDaysSince;
+    		
+    		writeNumber();
+    	}
+    }
+    
+    setInterval(checkAgain, 1000);
     
     </script>
     
@@ -71,10 +90,7 @@
     </svg>
     
     <script>
-    for (var c = 0, len = buffer.length; c < len; c++) {
-      console.log('hi!');
-      $('#number').prepend('<span class="digit">' + buffer[c] + '</div>');
-    };
+    writeNumber();
     
     $('#approachableBat').click(invertColors);
     </script>
